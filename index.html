@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+<style>
+input {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 6px;
+}
+label{
+    padding: 10px;
+    margin-right: 5px;
+}
+.cad{
+    height: 450px;
+    width: 800px;
+    border-radius: 30px;
+    background-color: aqua;
+}
+h1{
+    text-align: center;
+}
+
+/*Botão ENVIAR*/
+:root{
+    --cor-primaria-enviar : hwb(116 46% 7%);
+    --cor-secundaria-enviar : #000000;
+    --cor-hover-enviar : rgb(9, 237, 39);
+
+    --cor-primaria-deletar : hsl(0, 63%, 55%);
+    --cor-secundaria-deletar : #000000;
+    --cor-hover-deletar : rgb(243, 0, 0);
+
+    --cor-primaria-atualizar : hwb(201 15% 19%);
+    --cor-secundaria-atualizar : #000000;
+    --cor-hover-atualizar : rgb(25, 36, 237);
+}
+.btn{
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .4s;
+    border-radius: 8px;
+    padding: 15px;
+}
+.btn-enviar{
+    background-color: var(--cor-primaria-enviar);
+    outline-color: var(--cor-secundaria-enviar);
+    color: #000000;
+    width: 90px;
+}
+.btn-enviar:hover {
+    background-color: var(--cor-hover-enviar);
+}
+.btn-enviar:active{
+    color: black;
+}
+
+/*Botão DELETAR*/
+.btn-deletar{
+    background-color: var(--cor-primaria-deletar);
+    outline-color: var(--cor-secundaria-deletar);
+    color: #020202;
+    width: 100px;
+}
+.btn-deletar:hover {
+    background-color: var(--cor-hover-deletar);
+}
+.btn-deletar:active{
+    color: black;
+}
+
+/*Botão ATUALIZAR*/
+.btn-atualizar{
+    background-color: var(--cor-primaria-atualizar);
+    outline-color: var(--cor-secundaria-atualizar);
+    color: rgb(0, 0, 0);
+    width: 120px;
+}
+.btn-atualizar:hover {
+    background-color: var(--cor-hover-atualizar);
+}
+.btn-atualizar:active{
+    color: black;
+}
+</style>
+</head>
+<body>
+    <div class="cad">
+        <h1>Formulário</h1>
+        <form action="insert.php" method="post">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" size="52" maxlength="100"><br><br>
+
+        <label for="idade">Idade: </label>
+        <input type="number" id="idade" name="idade">
+
+        <label for="cpf">CPF: </label>
+        <input type="text" id="cpf" name="cpf" maxlength="14" size="18" pattern="\d{3}.\d{3}.\d{3}-\{2}"><br><br><br>
+
+            <button type="submit" class="btn btn-enviar" name="enviar">Enviar</button>
+            <button type="submit" class="btn btn-deletar" name="delete">Deletar</button>
+            <button type="submit" class="btn btn-atualizar" name="update">Atualizar</button><br><br><br>
+            <label for="Pesquisar">Buscar: <input type="text" name="consultar" id="consultar"></input></label>
+    </div>
+        </form>
+</body>
+</html>
+<!--433.096.348-50-->
